@@ -1,8 +1,30 @@
- import React from 'react'
- 
+import { useRef, useState } from 'react';
  const Hero = () => {
+const [currentIndex, setCurrentIndex] = useState(1);
+const [hasClicked, setHasClicked] = useState(false); 
+const [isLoading, setIsLoading] = useState(true);
+const [loadedVideos, setLoadedVideos] = ueState(0); 
+
+const totalVideos = 4;
+
+const nextVideoRef = useRef(null);
+
+  const handleMiniVdClick = () => {
+    setHasClicked (true);
+    currentIndex((prevIndex) => prevIndex + 1);
+  }
    return (
-     <div>Hero</div>
+     <div className="relative h-dvh w-screen overflow-x-hidden">
+      <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
+          <div>
+            <div className="mask-clip-path  absolute absolute-center z-50 size-64 cursor-pointer rounded-lg overflow-hidden">
+                <div className="">
+                  miniVideoPlayer
+                </div>
+            </div>
+          </div>
+      </div>
+     </div>
    )
  }
  
