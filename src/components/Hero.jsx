@@ -42,6 +42,16 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
 
                     onLoadedData={handleVideoLoad}
                   />
+                  <video
+                    className="origin-center size-64 scale-150 object-cover object-center"
+                    ref={nextVideoRef}
+                    src={getVideoSrc(currentIndex + 1)}
+                    loop
+                    muted
+                    id='current-video'
+
+                    onLoadedData={handleVideoLoad}
+                  />
                 </div>
             </div>
           </div>
