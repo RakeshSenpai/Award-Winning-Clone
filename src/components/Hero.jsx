@@ -51,7 +51,27 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
               muted
               id='next-video'
               className='absolute-center invisible absolute z-20 size-64 object-cover object-center'
+              onLoadedData={handleVideoLoad}
               />
+
+              <video 
+              src={getVideoSrc(currentIndex === totalVideos - 1 ? 1:currentIndex)}
+              autoPlay
+              loop
+              muted
+              className='absolute top-0 left-0 size-full object-cover object-center'
+              
+              />
+          </div>
+
+          <h1 className='special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75'>G<b>a</b>ming</h1>
+          <div className='absolute top-0 left-0 z-40 size-full'>
+              <div className='mt-24 px-5 sm:px-10'>
+                <h1 className='special-font hero-heading text-blue-100'>redefi<b>n</b>e</h1>
+                <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>Enter the Metagame Layer <br />
+                Unleash the Play Economy
+                </p>
+              </div>
           </div>
       </div>
      </div>
