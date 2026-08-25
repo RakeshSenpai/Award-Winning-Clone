@@ -35,7 +35,7 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
                   <video
                     className="origin-center size-64 scale-150 object-cover object-center"
                     ref={nextVideoRef}
-                    src={getVideoSrc(currentIndex + 1)}
+                    src={getVideoSrc(upComingVideoIndex)}
                     loop
                     muted
                     id='current-video'
@@ -44,6 +44,14 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
                   />
                 </div>
             </div>
+              <video
+              ref={nextVideoRef}
+              src={getVideoSrc(currentIndex)}
+              loop
+              muted
+              id='next-video'
+              className='absolute-center invisible absolute z-20 size-64 object-cover object-center'
+              />
           </div>
       </div>
      </div>
