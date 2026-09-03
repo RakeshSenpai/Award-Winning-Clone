@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import Button from './Button';
  const Hero = () => {
 const [currentIndex, setCurrentIndex] = useState(1);
 const [hasClicked, setHasClicked] = useState(false); 
@@ -71,6 +72,7 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
                 <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>Enter the Metagame Layer <br />
                 Unleash the Play Economy
                 </p>
+                <Button/>
               </div>
           </div>
       </div>
