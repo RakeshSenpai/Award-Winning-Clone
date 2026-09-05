@@ -72,7 +72,7 @@ const upComingVideoIndex = (currentIndex % totalVideos) + 1;
                 <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>Enter the Metagame Layer <br />
                 Unleash the Play Economy
                 </p>
-                <Button/>
+                <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow/>}/>
               </div>
           </div>
       </div>
